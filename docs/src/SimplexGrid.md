@@ -1,0 +1,5 @@
+# Simplex grid
+
+```@docs
+SimplexGrid
+```
