@@ -3,3 +3,7 @@
 ```@docs
 SimplexGrid
 ```
+
+```@docs
+print
+```

@@ -9,7 +9,7 @@ makedocs(
     sitename = "Julia Drift-Diffusion",
     pages = Any[
         "Home" => ["index.md"]
-        "Grid" => ["SimplexGrid.md"]
+        "Grid" => ["SimplexGrid.md", "FiniteVolumeGrid.md"]
     ],
     checkdocs = :all,
     format = :html

@@ -36,12 +36,12 @@ function extract_numeric_vector(fileLine::String, numericType::DataType, vectorS
   if (length(wordsOfLine) < vectorSize)
     throw(ErrorException("There is not enough data to extract from line!"))
   end
-  vector = Array{numericType}(vectorSize)
+  vector = Array{numericType}(undef, vectorSize)
   for index = 1 : vectorSize
-    if (isnull(tryparse(numericType, wordsOfLine[index])) == true)
+    if tryparse(numericType, wordsOfLine[index]) == nothing 
       throw(ErrorException("There is an invalid data type element in line!"))
     end
-    vector[index] = parse(numericType, wordsOfLine[index])
+    vector[index] = parse(numericType, string(wordsOfLine[index]))
   end
 
   return vector
